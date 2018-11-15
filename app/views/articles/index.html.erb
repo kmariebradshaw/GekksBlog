@@ -2,7 +2,7 @@
 
 <div class="page">
   <div class="accent-section">
-    <% @articles.each_with_index do |article, index| %>
+    <% @articles.to_enum.with_index.reverse_each do |article, index| %>
     <% if index % 2 == 0 %>
       <section class="flex-container latest-articles">
         <%= image_tag("", :alt => article.title, :class => "featured-image half") %> 
