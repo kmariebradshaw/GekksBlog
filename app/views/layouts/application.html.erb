@@ -10,24 +10,28 @@
   </head>
 
   <body>
-    <header>
-      <img src="/" alt="Gekks Blog" class="jlogo" />
-      <ul>
-        <a href="#"><li class="ttu text-green">Product</li></a>
-        <a href="#"><li class="ttu text-green">Rex</li></a>
-        <a href="#"><li class="ttu text-green">Lifestyle</li></a>
-        <a href="#"><li class="ttu text-green">Fashion</li></a>
+    <header class="flex-container-no">
+      <img src="/" alt="Gekks Blog" class="jlogo quarter" />
+      <ul class="half">
+        <li class="ttu ib"><a class="text-green" href="#">Product</a></li>
+        <li class="ttu text-green ib"><a class="text-green" href="#">Rex</a></li>
+        <li class="ttu text-green ib"><a class="text-green" href="#">Lifestyle</a></li>
+        <li class="ttu text-green ib"><a class="text-green" href="#">Fashion</a></li> 
        </ul>
-       <div class="search">
-        <img src="/" alt="Search" class="search icon">
+       <div class="quarter tar">
+       <div class="search ib">
+        <img src="/" alt="Search" class="icon">
        </div>
-       <div class="social">
-        <a href="#"><img src="/" alt="Gekks" /></a>
-        <a href="#"><img src="/" alt="Facebook" /></a>
-        <a href="#"><img src="/" alt="Instagram" /></a>
-        <a href="#"><img src="/" alt="Pinterest" /></a>
+       <div class="social ib">
+        <a href="#"><%= image_tag("favicon.png", :alt => "Gekks", :class => "icon") %></a>
+        <a href="#"><%= image_tag("facebook.png", :alt => "Facebook", :class => "icon") %></a>
+        <a href="#"><%= image_tag("instagram.png", :alt => "Instagram", :class => "icon") %></a>
+        <a href="#"><%= image_tag("pinterest.png", :alt => "Pinterest", :class => "icon") %></a>
        </div>
+      </div>
     </header>
+    <main>
     <%= yield %>
+    </main>
   </body>
 </html>
