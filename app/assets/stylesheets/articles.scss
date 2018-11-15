@@ -48,6 +48,10 @@ header {
   width: 100%;
   top: 0;
   box-sizing: border-box;
+  #header-spacer {
+    width: 80%;
+    margin: 0 auto;
+  }
   ul {
     list-style: none;
     padding-left: 0;
@@ -61,7 +65,7 @@ header {
   vertical-align: middle;
  }
  .search {}
- .jlogo {
+ .jlogo { max-width: 250px;
  }
 /* articles index */
 .latest-articles {
