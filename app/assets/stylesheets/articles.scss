@@ -18,10 +18,13 @@ $beige: #F9F2ED;
 $lightgray: #F9F7F7;
 $darkgray: #545359;
 body { margin: 0; }
+.page { padding: 50px; }
 h1,h2,h3,h4,h5,a, span, input, th, select { font-family: 'Gilroy', sans-serif; font-weight: 900; }
 p, textarea, td, ul, li, .error_message, .success_message { font-family: 'Gilroy', sans-serif; font-weight: 300; } 
 .ttu { text-transform: uppercase; }
+.tac { text-align: center; }
 .ib { display: inline-block; }
+.jcc {justify-content: center;}
 .text-green { color: $green; }
 .flex-container-no, .flex-container{
   display: flex;
@@ -31,6 +34,10 @@ a {text-decoration: none;}
 .quarter { width: 25%; }
 .half { width: 50%; }
 .tar { text-align: right; }
+.accent-section {
+  max-width: 1000px;
+  margin: 20px auto;
+}
 main { padding-top: 91px; }
 /*header*/
 header {
@@ -56,3 +63,8 @@ header {
  .search {}
  .jlogo {
  }
+/* articles index */
+.latest-articles {
+  border-bottom: 3px solid $lightgray;
+  padding: 20px;
+}

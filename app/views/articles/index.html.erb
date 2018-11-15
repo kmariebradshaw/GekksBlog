@@ -1,18 +1,21 @@
 
 
- 
-<% @articles.each do |article| %>
-<section class="flex-container">
-  <%= image_tag("", :alt => article.title, :class => "featured-image half") %> 
-  <div class="half">
-    <h2><%= article.title %></h2>
-    <p><%= article.summary %></p>
-    <p><% article.tag_list.each do | tag | %>
-        <%= tag.title %> | 
-        <% end %> 
-        Jess Fang</p>
-     <%= link_to 'Show', article_path(article) %>
-    </div>
-  </section>
-<% end %>
-
+<div class="page">
+  <div class="accent-section">
+    <% @articles.each do |article| %>
+      <section class="flex-container latest-articles">
+        <%= image_tag("", :alt => article.title, :class => "featured-image half") %> 
+        <div class="half tac">
+          <h2><%= article.title %></h2>
+          <p><%= article.summary %></p>
+          <p>
+            <% article.tag_list.each do | tag | %>
+              <%= tag.title %> | 
+            <% end %> 
+          Jess Fang</p>
+          <%= link_to 'Show', article_path(article) %>
+        </div>
+      </section>
+    <% end %>
+  </div>
+</div>
