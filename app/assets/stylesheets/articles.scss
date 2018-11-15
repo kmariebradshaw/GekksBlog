@@ -67,4 +67,5 @@ header {
 .latest-articles {
   border-bottom: 3px solid $lightgray;
   padding: 20px;
+  div, img { margin: 20px; }
 }

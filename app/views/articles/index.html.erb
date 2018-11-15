@@ -2,7 +2,8 @@
 
 <div class="page">
   <div class="accent-section">
-    <% @articles.each do |article| %>
+    <% @articles.each_with_index do |article, index| %>
+    <% if index % 2 == 0 %>
       <section class="flex-container latest-articles">
         <%= image_tag("", :alt => article.title, :class => "featured-image half") %> 
         <div class="half tac">
@@ -16,6 +17,21 @@
           <%= link_to 'Show', article_path(article) %>
         </div>
       </section>
+      <% else %>
+        <section class="flex-container latest-articles">
+        <div class="half tac">
+          <h2><%= article.title %></h2>
+          <p><%= article.summary %></p>
+          <p>
+            <% article.tag_list.each do | tag | %>
+              <%= tag.title %> | 
+            <% end %> 
+          Jess Fang</p>
+          <%= link_to 'Show', article_path(article) %>
+        </div>
+        <%= image_tag("", :alt => article.title, :class => "featured-image half") %> 
+      </section>
+      <% end %>
     <% end %>
   </div>
 </div>
