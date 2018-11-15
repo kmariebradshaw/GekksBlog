@@ -10,6 +10,30 @@
   </head>
 
   <body>
+    <header>
+      <div class="flex-container-no" id="header-spacer">
+      <a href="/"><%= image_tag("gekksblog.png", :alt => "Gekks", :class => "jlogo half") %></a>
+      <ul class="half">
+        <li class="ttu ib"><a class="text-green" href="#">Product</a></li>
+        <li class="ttu text-green ib"><a class="text-green" href="#">Rex</a></li>
+        <li class="ttu text-green ib"><a class="text-green" href="#">Lifestyle</a></li>
+        <li class="ttu text-green ib"><a class="text-green" href="#">Fashion</a></li> 
+       </ul>
+       <div class="quarter tar">
+       <div class="search ib">
+        <%= image_tag("search.png", :alt => "Search", :class => "icon") %>      
+       </div>
+       <div class="social ib">
+        <a href="#"><%= image_tag("favicon.png", :alt => "Gekks", :class => "icon") %></a>
+        <a href="#"><%= image_tag("facebook.png", :alt => "Facebook", :class => "icon") %></a>
+        <a href="#"><%= image_tag("instagram.png", :alt => "Instagram", :class => "icon") %></a>
+        <a href="#"><%= image_tag("pinterest.png", :alt => "Pinterest", :class => "icon") %></a>
+       </div>
+      </div>
+      </div>
+    </header>
+    <main>
     <%= yield %>
+    </main>
   </body>
 </html>

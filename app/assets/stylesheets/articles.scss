@@ -1,3 +1,76 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*general*/
+@font-face {
+  font-family: 'Gilroy';
+  src: url('Gilroy-ExtraBold.otf'); 
+  font-weight: 900; 
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('Gilroy-Light.otf'); 
+  font-weight: 300; 
+}
+$green: #6DCDB8;
+$beige: #F9F2ED;
+$lightgray: #F9F7F7;
+$darkgray: #545359;
+body { margin: 0; }
+.page { padding: 50px; }
+h1,h2,h3,h4,h5,a, span, input, th, select { font-family: 'Gilroy', sans-serif; font-weight: 900; }
+p, textarea, td, ul, li, .error_message, .success_message { font-family: 'Gilroy', sans-serif; font-weight: 300; } 
+.ttu { text-transform: uppercase; }
+.tac { text-align: center; }
+.ib { display: inline-block; }
+.jcc {justify-content: center;}
+.text-green { color: $green; }
+.flex-container-no, .flex-container{
+  display: flex;
+  align-items: center;
+}
+a {text-decoration: none;}
+.quarter { width: 25%; }
+.half { width: 50%; }
+.tar { text-align: right; }
+.accent-section {
+  max-width: 1000px;
+  margin: 20px auto;
+}
+main { padding-top: 91px; }
+/*header*/
+header {
+  padding: 20px;
+  background: #fff;
+  box-shadow: 2px 2px 10px $lightgray;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  box-sizing: border-box;
+  #header-spacer {
+    width: 80%;
+    margin: 0 auto;
+  }
+  ul {
+    list-style: none;
+    padding-left: 0;
+    display: inline-block;
+    li { margin: 0 20px 0 0; }
+  }
+}
+.icon { 
+  margin: 5px ;
+  height: 25px;
+  vertical-align: middle;
+ }
+ .search {}
+ .jlogo { max-width: 250px;
+ }
+/* articles index */
+.latest-articles {
+  border-bottom: 3px solid $lightgray;
+  padding: 20px;
+  div, img { margin: 20px; }
+  &:last-of-type { border-bottom: none; }
+}
