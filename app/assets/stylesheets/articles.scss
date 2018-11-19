@@ -17,10 +17,14 @@ $green: #6DCDB8;
 $beige: #F9F2ED;
 $lightgray: #F9F7F7;
 $darkgray: #545359;
-body { margin: 0; }
+body { 
+  margin: 0;
+  color: $darkgray;
+}
 .page { padding: 50px; }
 h1,h2,h3,h4,h5,a, span, input, th, select { font-family: 'Gilroy', sans-serif; font-weight: 900; }
 p, textarea, td, ul, li, .error_message, .success_message { font-family: 'Gilroy', sans-serif; font-weight: 300; } 
+a {color: $darkgray;}
 .ttu { text-transform: uppercase; }
 .tac { text-align: center; }
 .ib { display: inline-block; }
@@ -29,6 +33,10 @@ p, textarea, td, ul, li, .error_message, .success_message { font-family: 'Gilroy
 .flex-container-no, .flex-container{
   display: flex;
   align-items: center;
+}
+.ma {
+  display: block;
+  margin: 0 auto;
 }
 a {text-decoration: none;}
 .quarter { width: 25%; }
@@ -73,4 +81,9 @@ header {
   padding: 20px;
   div, img { margin: 20px; }
   &:last-of-type { border-bottom: none; }
+}
+/* articles show */
+#article-text {
+  max-width: 1000px;
+  margin: 3% auto;
 }

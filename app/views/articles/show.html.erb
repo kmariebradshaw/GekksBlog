@@ -1,12 +1,18 @@
 
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
- 
-<p>
-  <strong>Text:</strong>
-  <%= @article.text %>
-</p>
-<%= link_to 'Edit', edit_article_path(@article) %>
-<%= link_to 'Back', articles_path %>
+<h1 class="tac"><%= @article.title %> </h1>
+<p class="tac">Jess Fang | TAGS | <%= @article.created_at.strftime("%B %e, %Y") %>
+<p class="tac"><%= link_to 'Edit', edit_article_path(@article) %></p>
+<%= image_tag(@article.featured_image.url, :alt => @article.title, :class => "featured-image ma") %> 
+
+<p id="article-text"><%= @article.text %></p>
+
+<h3 class="tac outline">Read Next</h3>
+<section class="flex-container-no jcc"> 
+<% @articles.each do | article | %>
+  <div>
+    <%= image_tag(article.featured_image.url, :alt => article.title, :class => "fw") %>
+    <p class="tac"><span><%= article.title %></span></p>
+    <p class="subscript tac">TAGS</p>
+  </div>
+<% end %>
+</section>
