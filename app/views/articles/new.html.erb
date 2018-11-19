@@ -27,7 +27,9 @@
     <%= form.label :summary %><br>
     <%= form.text_area :summary %></p>
   <p>
-    <%= form.submit %>
+         <%= form.label :featured_image %><br>
+    <%= form.file_field :featured_image %></p>
+    <p><%= form.submit %>
   </p>
 <% end %>
 <%= link_to 'Back', articles_path %>

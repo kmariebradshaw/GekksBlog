@@ -5,7 +5,8 @@
     <% @articles.to_enum.with_index.reverse_each do |article, index| %>
     <% if index % 2 == 0 %>
       <section class="flex-container latest-articles">
-        <%= image_tag("", :alt => article.title, :class => "featured-image half") %> 
+        <%= image_tag(article.featured_image.url, :alt => article.title, :class => "featured-image half") %> 
+  
         <div class="half tac">
           <h2><%= article.title %></h2>
           <p><%= article.summary %></p>
@@ -29,7 +30,7 @@
           Jess Fang</p>
           <%= link_to 'Show', article_path(article) %>
         </div>
-        <%= image_tag("", :alt => article.title, :class => "featured-image half") %> 
+        <%= image_tag(article.featured_image.url, :alt => article.title, :class => "featured-image half") %> 
       </section>
       <% end %>
     <% end %>
