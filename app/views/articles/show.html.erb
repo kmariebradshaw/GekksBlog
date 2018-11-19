@@ -6,13 +6,13 @@
 
 <p id="article-text"><%= @article.text %></p>
 
-<h3 class="tac outline">Read Next</h3>
-<section class="flex-container-no jcc"> 
+<h3 class="tac outline ttu">Read Next</h3>
+<section class="flex-container-no jcc" id="read-next-container"> 
 <% @articles.each do | article | %>
   <div>
     <%= image_tag(article.featured_image.url, :alt => article.title, :class => "fw") %>
-    <p class="tac"><span><%= article.title %></span></p>
-    <p class="subscript tac">TAGS</p>
+    <p class="tac nmb"><span><%= article.title %></span></p>
+    <p class="subscript tac nm">TAGS</p>
   </div>
 <% end %>
 </section>

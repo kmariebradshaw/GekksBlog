@@ -34,6 +34,9 @@ a {color: $darkgray;}
   display: flex;
   align-items: center;
 }
+.nm { margin: 0; }
+.nmt { margin-top: 0; }
+.nmb { margin-bottom: 0; }
 .ma {
   display: block;
   margin: 0 auto;
@@ -46,7 +49,7 @@ a {text-decoration: none;}
   max-width: 1000px;
   margin: 20px auto;
 }
-main { padding-top: 91px; }
+main { padding-top: 150px; }
 /*header*/
 header {
   padding: 20px;
@@ -87,3 +90,15 @@ header {
   max-width: 1000px;
   margin: 3% auto;
 }
+#read-next-container  {
+    border: 3px solid $lightgray;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 50px;
+    border-top: none !important;
+}
+
+
+
+
+
