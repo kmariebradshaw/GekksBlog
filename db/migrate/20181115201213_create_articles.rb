@@ -4,6 +4,7 @@ class CreateArticles < ActiveRecord::Migration[5.2]
       t.string :title
       t.text :text
       t.text :summary
+      t.text :featured_image
 
       t.timestamps
     end
