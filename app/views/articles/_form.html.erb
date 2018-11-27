@@ -31,7 +31,8 @@
          <%= form.label :featured_image %><br>
     <%= form.file_field :featured_image %></p>
 
- 
+  <%= form.text_field :tag_list, value: form.object.tag_list.to_s %>
+
   <p>
     <%= form.submit %>
   </p>
