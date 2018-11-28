@@ -31,9 +31,17 @@
          <%= form.label :featured_image %><br>
     <%= form.file_field :featured_image %></p>
 
-  <%= form.text_field :tag_list, value: form.object.tag_list.to_s %>
-
-  <p>
+    <%= form.label 'Fashion' %>
+    <%= form.check_box :tag_list, {multiple: true }, 'Fashion', nil %>
+    <%= form.label 'DIY' %>
+    <%= form.check_box :tag_list, {multiple: true }, 'DIY', nil %>
+    <%= form.label 'Product' %>
+    <%= form.check_box :tag_list, {multiple: true }, 'Product', nil %>
+    <%= form.label 'Staff' %>
+    <%= form.check_box :tag_list, {multiple: true }, 'Staff', nil %>
+    <%= form.label 'Tech' %>
+    <%= form.check_box :tag_list, {multiple: true }, 'Tech', nil %>
+    <p>
     <%= form.submit %>
   </p>
  
