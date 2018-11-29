@@ -17,7 +17,7 @@
           <% end %>
           <p>
             <% article.tag_list.each do | tag | %>
-              <%= tag.title %> | 
+              <%= tag %> | 
             <% end %> 
           Jess Fang</p>
           <%= link_to 'Edit', edit_article_path(article) %>   | <%= link_to 'Delete', article_path(article),
@@ -33,7 +33,7 @@
           <% end %>
           <p>
             <% article.tag_list.each do | tag | %>
-              <%= tag.title %> | 
+              <%= tag %> | 
             <% end %> 
           Jess Fang</p>
           <%= link_to 'Edit', edit_article_path(article) %> | <%= link_to 'Delete', article_path(article),
