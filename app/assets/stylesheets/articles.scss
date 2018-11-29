@@ -60,7 +60,6 @@ header {
   top: 0;
   box-sizing: border-box;
   #header-spacer {
-    width: 80%;
     margin: 0 auto;
   }
   ul {
@@ -77,6 +76,7 @@ header {
  }
  .search {}
  .jlogo { max-width: 250px;
+  vertical-align: middle;
  }
 /* articles index */
 .latest-articles {

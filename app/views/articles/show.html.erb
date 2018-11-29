@@ -1,9 +1,16 @@
 
 <h1 class="tac"><%= @article.title %> </h1>
-<p class="tac">Jess Fang | TAGS | <%= @article.created_at.strftime("%B %e, %Y") %>
-<p class="tac"><%= link_to 'Edit', edit_article_path(@article) %></p>
-<%= image_tag(@article.featured_image.url, :alt => @article.title, :class => "featured-image ma") %> 
+<p class="tac">Jess Fang | 
+  <% @article.tag_list.each do | tag | %>
+    <%= tag  %> | 
+    <% end %> 
 
+
+  <%= @article.created_at.strftime("%B %e, %Y") %>
+<p class="tac"><%= link_to 'Edit', edit_article_path(@article) %></p>
+<% if @article.featured_image.length  > 0%>
+<%= image_tag(@article.featured_image.url, :alt => @article.title, :class => "featured-image ma") %> 
+<% end %> 
 <p id="article-text"><%= @article.text %></p>
  <h2>Comments</h2>
 <%= render @article.comments %>
@@ -14,12 +21,17 @@
 <h3 class="tac outline ttu">Read Next</h3>
 <section class="flex-container-no jcc" id="read-next-container"> 
 <% @articles.each do | article | %>
+<% if @article.featured_image.length  > 0%>
+
   <%= link_to article_path(article) do %>
     <div>
       <%= image_tag(article.featured_image.url, :alt => article.title, :class => "fw") %>
       <p class="tac nmb"><span><%= article.title %></span></p>
-      <p class="subscript tac nm">TAGS</p>
+      <p class="subscript tac nm"> <% @article.tag_list.each do | tag | %>
+    <%= tag  %> | 
+    <% end %></p>
     </div>
+  <% end %>
   <% end %>
 <% end %>
 </section>

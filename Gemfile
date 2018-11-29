@@ -33,7 +33,7 @@ gem 'mini_magick', '~> 4.3'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem 'acts-as-taggable-on', '~> 5.0'
+gem 'acts-as-taggable-on', github: 'Fodoj/acts-as-taggable-on', branch: 'rails-5.2'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false

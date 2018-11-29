@@ -6,7 +6,9 @@
     <% if index % 2 == 0 %>
       <section class="flex-container latest-articles">
         <%= link_to article_path(article), :class=>"half" do %>
+        <% if article.featured_image.length  > 0%>
         <%= image_tag(article.featured_image.url, :alt => article.title, :class => "featured-image fw") %> 
+        <% end %>
       <% end %>
         <div class="half tac">
           <%= link_to article_path(article) do %>
@@ -15,7 +17,7 @@
           <% end %>
           <p>
             <% article.tag_list.each do | tag | %>
-              <%= tag.title %> | 
+              <%= tag %> | 
             <% end %> 
           Jess Fang</p>
           <%= link_to 'Edit', edit_article_path(article) %>   | <%= link_to 'Delete', article_path(article),
@@ -31,7 +33,7 @@
           <% end %>
           <p>
             <% article.tag_list.each do | tag | %>
-              <%= tag.title %> | 
+              <%= tag %> | 
             <% end %> 
           Jess Fang</p>
           <%= link_to 'Edit', edit_article_path(article) %> | <%= link_to 'Delete', article_path(article),
@@ -39,7 +41,10 @@
               data: { confirm: 'Are you sure?' } %>
         </div>
         <%= link_to article_path(article), :class=>"half" do %>
+        <% if article.featured_image.length  > 0%>
+
           <%= image_tag(article.featured_image.url, :alt => article.title, :class => "featured-image fw") %> 
+        <% end %> 
         <% end %> 
       </section>
       <% end %>
